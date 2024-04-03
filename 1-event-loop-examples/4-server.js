@@ -1,7 +1,8 @@
-const http = require ('http')
+const http  =require('http')
 
 const server = http.createServer((_req,res)=>{
-  
+    console.log('request event')
+    res.end('Hello World')
 })
 
 server.listen(5000 ,() =>{
