@@ -1,0 +1,15 @@
+const auth = (req,res,next) =>{
+    const {user} = req.query;
+    if (user === 'john'){
+        req.user ={name :'john',id:3}
+        next()
+    }
+    else{
+        res.status(401).send('Unauth')
+    }
+    console.log('auth')
+    next()
+}
+
+
+module.exports = auth
